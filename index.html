@@ -79,7 +79,7 @@ body, html{
     box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.4);
 }
 
-/* SECOND SCREEN (FIXED ALIGNMENT) */
+/* SECOND SCREEN (FIXED) */
 .confirmation{
     display: none;
     width: 100%;
@@ -88,10 +88,10 @@ body, html{
     top: 0;
     left: 0;
 
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .confirmation h1{
@@ -99,10 +99,8 @@ body, html{
     text-shadow: 0px 3px 6px rgb(147, 77, 77);
 }
 
+/* IMAGE */
 .fix-gif{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 20px 0;
 }
 
@@ -112,6 +110,7 @@ body, html{
     height: 200px;
     background-image: url("https://media1.tenor.com/m/2VprHA868S8AAAAC/yummy-desserts-desserts-milk-mocha.gif");
     background-size: cover;
+    margin: auto;
 }
 
 /* BUTTON */
@@ -133,7 +132,7 @@ body, html{
 .sub-text{
     font-size: 12px;
     margin-top: 2px;
-    color: black; /* 👈 fixed */
+    color: black;
     font-weight: 500;
 }
 </style>
@@ -175,7 +174,7 @@ const container = document.querySelector(".container");
 
 yes.onclick = () => {
     container.style.display = "none";
-    confirmation.style.display = "flex";
+    confirmation.style.display = "flex"; // ✅ important fix
 };
 
 no.onclick = () => {
@@ -188,7 +187,6 @@ no.onclick = () => {
     no.style.top = y + "px";
 };
 
-// Instagram redirect
 document.getElementById("fix").onclick = () => {
     window.location.href = "https://www.instagram.com/divyanshhh._1/";
 };
